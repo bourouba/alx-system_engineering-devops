@@ -1,0 +1,2 @@
+#!/bin/bash
+ls -1 | awk '/^\.\.?$/ { print $0; next } { printf "%s, ", $0 } END { print "" }' | sort -f -k 1.1,1.2
